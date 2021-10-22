@@ -1,0 +1,209 @@
+:root {
+  --primary-color:rgb(0, 0, 0);
+  --color-white: #fff;
+  --color-black: rgb(255, 196, 2);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-image: url(https://images.wallpaperscraft.ru/image/single/ovtsa_sobaka_trava_95236_1920x1080.jpg);
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+p {
+  color: var(--color-black);
+}
+
+/* header  poloska*/
+header {
+  width: 100%;
+  /* position: fixed; */
+  min-height: 80px;
+  display: flex;
+  top: 0;
+}
+
+/* надписи в полоске */
+.class1 ul
+{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  list-style: none;
+  display: flex;
+}
+
+.class1 ul li a {
+  
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+}
+
+.logo {
+
+  font-size: 2rem;
+  padding-right: 1.5rem;
+}
+
+.class1 {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.class2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.class3 {
+  color: var(--primary-color);
+  height: 200px;
+  width: 500px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.class3 span {
+	background-color: rgba(247, 235, 235, 0.5);
+	box-shadow: -10px 0 0 rgba(245, 227, 227, 0.5), 10px 0 0 rgba(255, 231, 231, 0.5);
+}
+.class4 {
+  
+  font-size: medium;
+  color: var(--primary-color);
+  height: 50px;
+  width: 500px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.class4 span {
+	background-color: rgba(247, 235, 235, 0.5);
+	box-shadow: -10px 0 0 rgba(245, 227, 227, 0.5), 10px 0 0 rgba(255, 231, 231, 0.5);
+}
+
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+    bottom: 10px;
+    left: 52%;
+    margin-left: -104.5px;
+}
+
+
+
+.kartochka, .kartochka2, .kartochka3, .kartochka4, .kartochka5, .kartochka6 {
+  width: 300px;
+  position: relative;
+}
+
+.kartochka-perevarot {
+  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+  transition: all 2s;
+  position:absolute;
+  top: 30px;
+  left: 280px;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.kartochka-back{
+  transform:rotateY(180deg);
+}
+
+.kartochka:hover .kartochka-front , .kartochka2:hover  .kartochka-front, .kartochka3:hover  .kartochka-front,  .kartochka4:hover  .kartochka-front,  .kartochka5:hover  .kartochka-front , .kartochka6:hover  .kartochka-front {
+  transform: rotateY(-180deg);
+}
+
+.kartochka:hover .kartochka-back, .kartochka2:hover .kartochka-back  , .kartochka3:hover .kartochka-back , .kartochka4:hover .kartochka-back , .kartochka5:hover .kartochka-back , .kartochka6:hover .kartochka-back  {
+  transform: rotateY(0); 
+}
+
+.kartochka-perevarot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.class5 {
+  background-image: url(https://images.wallpaperscraft.ru/image/single/ovtsa_kudri_trava_108810_300x168.jpg);
+  padding: 30px;
+}
+.class5 span {
+	background-color: rgba(247, 235, 235, 0.5);
+	box-shadow: -10px 0 0 rgba(245, 227, 227, 0.5), 10px 0 0 rgba(255, 231, 231, 0.5);
+}
+
+
+
+
+.kartochka-perevarot2 {
+  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+  transition: all 2s;
+  position:absolute;
+  top: 30px;
+  left: 610px;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.kartochka-perevarot3 {
+  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+  transition: all 2s;
+  position:absolute;
+  top: 30px;
+  left: 930px;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.kartochka-perevarot4 {
+  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+  transition: all 2s;
+  position:absolute;
+  top: 230px;
+  left: 280px;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.kartochka-perevarot5 {
+  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+  transition: all 2s;
+  position:absolute;
+  top: 230px;
+  left: 610px;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.kartochka-perevarot6 {
+  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+  transition: all 2s;
+  position:absolute;
+  top: 230px;
+  left: 930px;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
