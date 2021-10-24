@@ -3,14 +3,9 @@
   --color-white: #fff;
   --color-black: rgb(255, 196, 2);
 }
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-}
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
   font-size: 1em;
   background-image: url(https://images.wallpaperscraft.ru/image/single/ovtsa_sobaka_trava_95236_1920x1080.jpg);
 }
@@ -26,17 +21,14 @@ p {
 /* header  poloska*/
 header {
   width: 100%;
-  /* position: fixed; */
-  min-height: 80px;
   display: flex;
-  top: 0;
 }
 
 /* надписи в полоске */
 .class1 ul
 {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   list-style: none;
   display: flex;
 }
@@ -44,7 +36,7 @@ header {
 .class1 ul li a {
   
   padding-top: 1rem;
-  padding-right: 1.5rem;
+  padding-right: 2rem;
 }
 
 .logo {
@@ -110,35 +102,51 @@ header {
 
 
 
-.kartochka, .kartochka2, .kartochka3, .kartochka4, .kartochka5, .kartochka6 {
+.card {
   width: 300px;
   position: relative;
+  text-align: center;
+  height: 200px;
+  margin-top: 5%;
+  justify-content: space-between;
 }
 
-.kartochka-perevarot {
-  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+.card-flip {
   transition: all 2s;
   position:absolute;
-  top: 30px;
-  left: 280px;
   width:100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-.kartochka-back{
+.card-back{
   transform:rotateY(180deg);
 }
 
-.kartochka:hover .kartochka-front , .kartochka2:hover  .kartochka-front, .kartochka3:hover  .kartochka-front,  .kartochka4:hover  .kartochka-front,  .kartochka5:hover  .kartochka-front , .kartochka6:hover  .kartochka-front {
+.card:hover .card-front{
   transform: rotateY(-180deg);
 }
 
-.kartochka:hover .kartochka-back, .kartochka2:hover .kartochka-back  , .kartochka3:hover .kartochka-back , .kartochka4:hover .kartochka-back , .kartochka5:hover .kartochka-back , .kartochka6:hover .kartochka-back  {
+.card:hover .card-back{
   transform: rotateY(0); 
 }
 
-.kartochka-perevarot img {
+.card-flip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cards{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+
+}
+
+.cards img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -157,8 +165,7 @@ header {
 
 
 
-.kartochka-perevarot2 {
-  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
+/* .kartochka-perevarot2 {
   transition: all 2s;
   position:absolute;
   top: 30px;
@@ -168,7 +175,6 @@ header {
   -webkit-backface-visibility: hidden;
 }
 .kartochka-perevarot3 {
-  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
   transition: all 2s;
   position:absolute;
   top: 30px;
@@ -178,7 +184,6 @@ header {
   -webkit-backface-visibility: hidden;
 }
 .kartochka-perevarot4 {
-  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
   transition: all 2s;
   position:absolute;
   top: 230px;
@@ -188,7 +193,6 @@ header {
   -webkit-backface-visibility: hidden;
 }
 .kartochka-perevarot5 {
-  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
   transition: all 2s;
   position:absolute;
   top: 230px;
@@ -198,7 +202,6 @@ header {
   -webkit-backface-visibility: hidden;
 }
 .kartochka-perevarot6 {
-  /* box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5); */
   transition: all 2s;
   position:absolute;
   top: 230px;
@@ -206,4 +209,7 @@ header {
   width:100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-}
+} */
+
+
+
