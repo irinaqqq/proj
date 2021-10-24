@@ -1,25 +1,17 @@
-:root {
-  --primary-color:rgb(0, 0, 0);
-  --color-white: #fff;
-  --color-black: rgb(255, 196, 2);
-}
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  font-size: 1em;
   background-image: url(https://images.wallpaperscraft.ru/image/single/ovtsa_sobaka_trava_95236_1920x1080.jpg);
 }
-
+ /* цвет надписей в полоске */
 a {
-  color: var(--color-white);
+  color: #fff;
   text-decoration: none;
 }
-p {
-  color: var(--color-black);
-}
-
-/* header  poloska*/
+/* полоска размеры*/
 header {
+  min-height: 80px;
+  min-width: 800px;
   width: 100%;
   display: flex;
 }
@@ -27,42 +19,42 @@ header {
 /* надписи в полоске */
 .class1 ul
 {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  align-items: center;
   list-style: none;
   display: flex;
 }
 
+/* надписи */
 .class1 ul li a {
   
   padding-top: 1rem;
   padding-right: 2rem;
 }
-
+/* лого */
 .logo {
 
   font-size: 2rem;
-  padding-right: 1.5rem;
 }
-
+/* полоска */
 .class1 {
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: rgb(0, 0, 0);
   padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+/* расположение надписей в центре */
 .class2 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
+/* надпись в центре */
 .class3 {
-  color: var(--primary-color);
+  color: rgb(0, 0, 0);
   height: 200px;
   width: 500px;
   display: flex;
@@ -70,14 +62,10 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.class3 span {
-	background-color: rgba(247, 235, 235, 0.5);
-	box-shadow: -10px 0 0 rgba(245, 227, 227, 0.5), 10px 0 0 rgba(255, 231, 231, 0.5);
-}
 .class4 {
   
   font-size: medium;
-  color: var(--primary-color);
+  color: rgb(0, 0, 0);
   height: 50px;
   width: 500px;
   display: flex;
@@ -85,14 +73,62 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.class4 span {
+/* фон надписи */
+.class3 span, .class4 span, .class5 span {
 	background-color: rgba(247, 235, 235, 0.5);
 	box-shadow: -10px 0 0 rgba(245, 227, 227, 0.5), 10px 0 0 rgba(255, 231, 231, 0.5);
 }
+/* тоже надписи */
+.class4 {
+  
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  height: 50px;
+  width: 500px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+/* карточки перевертышы */
+.cards{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* размеры одной карточки */
+.card {
+  width: 300px;
+  position: relative;
+  height: 200px;
+  padding: 5px;
+}
+/* собственно перевороты */
+.card-flip {
+  transition: all 2s;
+  position:absolute;
+  backface-visibility: hidden;
+}
+.card-back{
+  transform:rotateY(180deg);
+}
+.card:hover .card-front{
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back{
+  transform: rotateY(0); 
+}
 
+/* надписи за карточкой */
+.class5 {
+  background-image: url(https://images.wallpaperscraft.ru/image/single/ovtsa_kudri_trava_108810_300x168.jpg);
+  padding: 30px;
+}
 
 .btn {
-  background-color: var(--primary-color);
+  background-color: rgb(0, 0, 0);
   padding: 0.5rem 1.5rem;
   position: fixed;
     bottom: 10px;
@@ -100,116 +136,6 @@ header {
     margin-left: -104.5px;
 }
 
-
-
-.card {
-  width: 300px;
-  position: relative;
-  text-align: center;
-  height: 200px;
-  margin-top: 5%;
-  justify-content: space-between;
-}
-
-.card-flip {
-  transition: all 2s;
-  position:absolute;
-  width:100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.card-back{
-  transform:rotateY(180deg);
-}
-
-.card:hover .card-front{
-  transform: rotateY(-180deg);
-}
-
-.card:hover .card-back{
-  transform: rotateY(0); 
-}
-
-.card-flip img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.cards{
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
+@media(max-width:950px) {
   
-
 }
-
-.cards img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.class5 {
-  background-image: url(https://images.wallpaperscraft.ru/image/single/ovtsa_kudri_trava_108810_300x168.jpg);
-  padding: 30px;
-}
-.class5 span {
-	background-color: rgba(247, 235, 235, 0.5);
-	box-shadow: -10px 0 0 rgba(245, 227, 227, 0.5), 10px 0 0 rgba(255, 231, 231, 0.5);
-}
-
-
-
-
-/* .kartochka-perevarot2 {
-  transition: all 2s;
-  position:absolute;
-  top: 30px;
-  left: 610px;
-  width:100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.kartochka-perevarot3 {
-  transition: all 2s;
-  position:absolute;
-  top: 30px;
-  left: 930px;
-  width:100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.kartochka-perevarot4 {
-  transition: all 2s;
-  position:absolute;
-  top: 230px;
-  left: 280px;
-  width:100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.kartochka-perevarot5 {
-  transition: all 2s;
-  position:absolute;
-  top: 230px;
-  left: 610px;
-  width:100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.kartochka-perevarot6 {
-  transition: all 2s;
-  position:absolute;
-  top: 230px;
-  left: 930px;
-  width:100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-} */
-
-
-
